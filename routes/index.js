@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 /* GET example.txt */
 router.get('/example.txt', function(req, res, next) {
-  res.send('example.txt');
+  res.sendfile('example.txt');
 });
 
 module.exports = router;
