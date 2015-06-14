@@ -2,5 +2,5 @@
 
 heroku config:set NODE_MODULES_CACHE=false
 git commit -am 'disable node_modules cache' --allow-empty
-git push heroku master
+git push origin master && git push heroku master
 heroku config:set NODE_MODULES_CACHE=true
