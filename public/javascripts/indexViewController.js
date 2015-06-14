@@ -1,11 +1,38 @@
-/* TODO convert to Angular */
 window.addEventListener('load', function(){
 
-  var initialize = function() {
-    console.log("test");
+  var TicketView = Backbone.View.extend({
 
-  }
+    doSearch: function( event ){
+      console.log( "Search for " + $(event.target).val(), searchView );
 
-  initialize();
+      var searchValue = $(event.target).val();
+      searchView.$el.html("Fetching: " + searchValue);
+    },
+
+    events: {
+      "keyup input.ticket": "doSearch",
+    },
+
+    initialize: function() {
+    },
+
+    render: function() {
+    }
+  });
+
+  var SearchView = Backbone.View.extend({
+
+    events: {
+    },
+
+    initialize: function() {
+    },
+
+    render: function() {
+    }
+  });
+
+  var ticketView = new TicketView({el: ".ticketView"});
+  var searchView = new SearchView({el: ".searchView"});
 
 });

@@ -3,14 +3,16 @@
 
 <h1>GiggyPOP</h1>
 <p>Which gig do you want to go to? Paste your ticket url here:</p>
-<form>
+
+<div class="ticketView">
   <input type="text" class="ticket" placeholder="Dice / Songkick / Roundhouse" length="200" />
-</form>
+</div>
+
+<div class="searchView"></div>
 
 {{#extend "scripts"}}
 <script src="/javascripts/libs/zepto.js" /></script>
 <script src="/javascripts/libs/underscore.js" /></script>
 <script src="/javascripts/libs/backbone.js" /></script>
-<script src="/javascripts/indexViewController.js" /></script>
 <script src="/javascripts/indexViewController.js" /></script>
 {{/extend}}
