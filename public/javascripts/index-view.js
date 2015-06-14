@@ -9,6 +9,6 @@ window.addEventListener('load', function(){
     console.log("addEvents");
   }
 
-  initialize();
+  this.initialize();
 
 });
