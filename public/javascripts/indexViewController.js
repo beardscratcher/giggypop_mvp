@@ -1,6 +1,7 @@
 /* TODO convert to Angular */
 window.addEventListener('load', function(){
 
+  /*
   var initialize: function() {
     console.log('initialize');
   }
@@ -9,7 +10,7 @@ window.addEventListener('load', function(){
     console.log("addEvents");
   }
 
-  initialize();
+  initialize();*/
 
   console.log("test");
 
