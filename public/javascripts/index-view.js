@@ -11,4 +11,6 @@ window.addEventListener('load', function(){
 
   initialize();
 
+  console.log("test");
+
 });
