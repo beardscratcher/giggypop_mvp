@@ -1,5 +1,5 @@
 /* TODO convert to Angular */
-document.addEventListener('load', function(){
+window.addEventListener('load', function(){
 
   initialize: function() {
     console.log('initialize');
