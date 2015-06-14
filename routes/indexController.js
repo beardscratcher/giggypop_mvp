@@ -6,4 +6,4 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'GiggyPOP' });
 });
 
-module.exports = router;
+module.exports = indexController;
