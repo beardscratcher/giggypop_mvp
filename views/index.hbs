@@ -1,5 +1,15 @@
+{{#extend "stylesheets"}}
+<link rel="stylesheet" href="/css/index.css"/>
+{{/extend}}
+
 <h1>GiggyPOP</h1>
 <p>Which gig do you want to go to? Paste your ticket url here</p>
 <form>
   <input type="text" placeholder="Dice / Songkick / Roundhouse" length="200" />
 </form>
+
+{{#extend "scripts"}}
+<script>
+  document.write('foo bar!');
+</script>
+{{/extend}}

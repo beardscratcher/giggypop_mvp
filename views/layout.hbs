@@ -3,9 +3,12 @@
   <head>
     <title>{{title}}</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+
+    {{{block "stylesheets"}}}
   </head>
   <body>
     {{{body}}}
   </body>
-  <script src="/javascripts/index-view.js" />
+  <!--<script src="/javascripts/index-view.js" />-->
+  {{{block "scripts"}}}
 </html>
