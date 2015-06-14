@@ -3,8 +3,6 @@ window.addEventListener('load', function(){
   var TicketView = Backbone.View.extend({
 
     doSearch: function( event ){
-      console.log( "Search for " + $(event.target).val(), searchView );
-
       var searchValue = $(event.target).val();
       searchView.$el.html("Fetching: " + searchValue);
     },
