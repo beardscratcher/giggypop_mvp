@@ -7,6 +7,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var indexController = require('./routes/indexController');
+var inviteFriendsController = require('./routes/inviteFriendsController');
+var createPaymentAndSendInviteController = require('./routes/createPaymentAndSendInviteController');
 
 // view engine setup
 var app = express();
