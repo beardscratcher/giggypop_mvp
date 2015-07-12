@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/invite', function(req, res, next) {
-  res.render('invite', { title: 'Invite to' });
+  res.render('inviteFriends', { title: 'Invite friends' });
 });
 
 module.exports = router;
