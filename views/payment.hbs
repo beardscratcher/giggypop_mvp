@@ -1,0 +1,89 @@
+{{#extend "stylesheets"}}
+{{/extend}}
+
+<h1>GiggyPOP</h1>
+<p>Payment details</p>
+
+{
+  exp_months: [
+    "January",
+    "Febuary",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ],
+  exp_years: [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2027,
+    2028,
+    2029,
+    2030,
+    2031,
+    2032,
+    2033,
+    2034,
+  ]
+}
+
+<form >
+  <div class="credit-details">
+    <div>
+      <label for="cc-number"></label>
+      <input name="cc-number">
+    </div>
+
+    <div>
+      <label for="cc-exp-month"></label>
+      <input name="cc-exp-month">
+      <select name="cc-exp-month">
+        {{#each exp_months ~}}
+          <option value="{{ @index }}">{{ this }}</option>
+        {{~/each}}
+      </select>
+    </div>
+
+    <div>
+      <label for="cc-exp-year"></label>
+      <select name="cc-exp-month">
+        {{#each exp_years ~}}
+          <option value="{{ this }}">{{ this }}</option>
+        {{~/each}}
+      </select>
+    </div>
+
+    <div>
+      <label for="cc-ccv"></label>
+      <input name="cc-ccv">
+    </div>
+  </div>
+
+  <div>
+    <label for="open-invate">Open Invite?</label>
+    Yes <input type="radio" value="true"  name="open-invite" checked>
+    No <input type="radio" value="false" name="open-invite">
+  </div>
+</form>
+
+{{#extend "scripts"}}
+<script src="/javascripts/libs/zepto.js" /></script>
+<script src="/javascripts/libs/underscore.js" /></script>
+<script src="/javascripts/libs/backbone.js" /></script>
+{{/extend}}
