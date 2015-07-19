@@ -1,0 +1,91 @@
+{{#extend "stylesheets"}}
+{{/extend}}
+
+<h1>GiggyPOP</h1>
+<p>Payment details</p>
+
+<form >
+  <div class="personal-details">
+    <div>
+      <label for="address-line-2">Address Line 1</label>
+      <input name="address-line-1">
+    </div>
+
+    <div>
+      <label for="address-line-2">Address Line 2</label>
+      <input name="address-line-2">
+    </div>
+
+    <div>
+      <label for="city">City</label>
+      <input name="city">
+    </div>
+
+    <div>
+      <label for="state">State</label>
+      <input name="state">
+    </div>
+
+    <div>
+      <label for="country">Country</label>
+      <input name="country">
+    </div>
+
+    <div>
+      <label for="post-code">Post code / zip</label>
+      <input name="post-code">
+    </div>
+  </div>
+
+  <div class="credit-details">
+    <div>
+      <label for="cc-name">Name as it appears on credit card</label>
+      <input name="cc-name">
+    </div>
+
+    <div>
+      <label for="cc-number">Credit Card Number</label>
+      <input name="cc-number" type="number">
+    </div>
+
+    <div class="expiry-details">
+      Expires on:
+      <div>
+        <label for="cc-exp-month">Month</label>
+        <select name="cc-exp-month">
+          {{#each exp_months ~}}
+            <option value="{{ @index }}">{{ month }}</option>
+          {{~/each}}
+        </select>
+      </div>
+
+      <div>
+        <label for="cc-exp-year">Year</label>
+        <select name="cc-exp-month">
+          {{#each exp_years ~}}
+            <option value="{{ this }}">{{ this }}</option>
+          {{~/each}}
+        </select>
+      </div>
+    </div>
+
+    <div>
+      <label for="cc-ccv">CCV</label>
+      <input name="cc-ccv" type="number">
+    </div>
+  </div>
+
+  <div>
+    <label for="open-invate">Open Invite?</label>
+    Yes <input type="radio" value="true"  name="open-invite" checked>
+    No <input type="radio" value="false" name="open-invite">
+  </div>
+
+  <button type="submit">Invite!</button>
+</form>
+
+{{#extend "scripts"}}
+<script src="/javascripts/libs/zepto.js" /></script>
+<script src="/javascripts/libs/underscore.js" /></script>
+<script src="/javascripts/libs/backbone.js" /></script>
+{{/extend}}
