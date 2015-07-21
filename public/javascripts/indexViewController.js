@@ -5,7 +5,12 @@ window.addEventListener('load', function(){
     doSearch: function( event ){
       searchView.$el.html("");
       var searchValue = $(event.target).val();
-      if (searchValue.length > 0 ) searchView.$el.html("Fetching: " + searchValue);
+      if (searchValue.length > 0 ) {
+        var searchResult = new SearchResult({id: searchValue});
+        searchView = new SearchView({el: ".searchView", model: searchResult});
+        searchView.$el.html("Fetching: " + searchValue);
+        searchResult.fetch();
+      }
     },
 
     events: {
@@ -25,9 +30,19 @@ window.addEventListener('load', function(){
     },
 
     initialize: function() {
+      this.listenTo(this.model, 'change', this.render);
     },
 
     render: function() {
+      if (this.model.get('gig')) {
+        this.$el.append('<div class=result">Gig: ' + this.model.get('gig') + '</div>');
+      }
+    }
+  });
+
+  var SearchResult = Backbone.Model.extend({
+    url: function() {
+      return '/search/' + this.id;
     }
   });
 

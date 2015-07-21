@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 var indexController = require('./routes/indexController');
 var inviteFriendsController = require('./routes/inviteFriendsController');
 var createPaymentAndSendInviteController = require('./routes/createPaymentAndSendInviteController');
+var searchController = require('./routes/searchController');
 
 // view engine setup
 var app = express();
@@ -43,6 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexController);
 app.use('/', inviteFriendsController);
 app.use('/', createPaymentAndSendInviteController);
+app.use('/', searchController);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
