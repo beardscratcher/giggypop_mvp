@@ -15,9 +15,9 @@ router.get('/search/:search_for', function(req, res, next) {
   var index = 0;
 
   if (req.session.searches) {
-    index = req.session['searches'].push(search_for) - 1;
+    index = req.session['searches'].push(search_result) - 1;
   } else {
-    req.session.searches = [search_for];
+    req.session.searches = [search_result];
   }
 
   search_result['result_token'] = index;
