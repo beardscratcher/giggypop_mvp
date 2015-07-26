@@ -35,7 +35,7 @@ window.addEventListener('load', function(){
 
     render: function() {
       if (this.model.get('gig')) {
-        this.$el.append('<div class=result">Gig: ' + this.model.get('gig') + '</div>');
+        this.$el.append('<form action="/invite/' + this.model.get('result_token') + '"><div class=result">Gig: ' + this.model.get('gig') + '</div><button type="submit">That\'s the one!</button></form>');
       }
     }
   });
