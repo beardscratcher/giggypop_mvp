@@ -14,5 +14,10 @@
     "hbs": "~2.9.0",
     "morgan": "~1.5.3",
     "serve-favicon": "~2.2.1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-compass": "~1.0.3",
+    "grunt-contrib-watch": "~0.6.1"
   }
 }
