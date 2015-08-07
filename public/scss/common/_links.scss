@@ -1,0 +1,12 @@
+/* Common > Links
+================================================== */
+
+a {
+	color: $primary-brand-colour;
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	text-decoration: underline;
+}
