@@ -10,12 +10,17 @@ module.exports = function(grunt) {
 			},
 			build: {
 				options: { outputStyle: 'compressed' }
+			},
+			development: {
+				build: {
+					options: { outputStyle: 'expanded'}
+				}
 			}
 		},
 		watch: {
 			css: {
 				files: '**/*.scss',
-				tasks: ['compass']
+				tasks: ['compass:development']
 			}
 		}
 	});
